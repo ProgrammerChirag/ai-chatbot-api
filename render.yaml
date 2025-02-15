@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: your-service
+    env: node
+    buildCommand: |
+      sudo apt-get update
+      sudo apt-get install -y libxi-dev libx11-dev libxxf86vm-dev
+      npm install --unsafe-perm --force
+    startCommand: node app.js
