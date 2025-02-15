@@ -7,15 +7,17 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
+# Update system packages and install required dependencies
 RUN apt-get update && apt-get install -y libxi-dev libx11-dev libxxf86vm-dev
+
+# Install Node.js dependencies
 RUN npm install --unsafe-perm --force
 
 # Copy the rest of the application code
 COPY . .
 
-# Expose port 3000
+# Expose port 3000 (or Railway's assigned port)
 EXPOSE 3000
 
-# Command to start the app
+# Start the application
 CMD ["node", "server.js"]
