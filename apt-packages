@@ -2,3 +2,5 @@ libxi-dev
 libx11-dev
 libxxf86vm-dev
 libglu1-mesa-dev
+libxcursor-dev
+x11proto-xf86vidmode-dev
