@@ -1,20 +1,16 @@
 {
   "name": "ai-chatbot-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "acorn": "^8.14.0",
+    "brain.js": "^2.0.0-beta.24",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "gl": "^8.1.6",
+    "gpu-mock.js": "^1.3.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ProgrammerChirag/ai-chatbot-api.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ProgrammerChirag/ai-chatbot-api/issues"
-  },
-  "homepage": "https://github.com/ProgrammerChirag/ai-chatbot-api#readme"
+    "start": "node server.js"
+  }
 }
