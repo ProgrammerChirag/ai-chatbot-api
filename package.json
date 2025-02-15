@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "preinstall": "apt-get update && apt-get install -y libxi-dev libx11-dev libxxf86vm-dev libglu1-mesa-dev libxcursor-dev"
+    "preinstall": "export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig && export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu && apt-get update && apt-get install -y libxi-dev libx11-dev libxxf86vm-dev libglu1-mesa-dev libxcursor-dev || true",
+    "install": "npm install --build-from-source"
   }
 }
