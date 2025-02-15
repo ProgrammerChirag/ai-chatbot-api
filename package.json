@@ -7,12 +7,14 @@
     "brain.js": "^2.0.0-beta.24",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "gpu.js": "2.15.0"
+    "gl": "^5.1.0",
+    "gpu.js": "^2.16.0",
+    "node-gyp": "^9.4.1" 
   },
   "scripts": {
     "start": "node server.js",
     "preinstall": "export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig && export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu && apt-get update && apt-get install -y libxi-dev libx11-dev libxxf86vm-dev libglu1-mesa-dev libxcursor-dev || true",
-    "install": "npm install --build-from-source",
+    "install": "npm install --unsafe-perm --force",
     "render-build": "npm install --unsafe-perm --force"
   },
   "engines": {
